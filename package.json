@@ -1,0 +1,35 @@
+{
+  "name": "ui-router-menu-service",
+  "version": "1.0.0",
+  "description": "An AngularJS service to ease the menu styling when the routing changes, when using the ui-router.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package-libs": "gulp package-libs",
+    "clear-libs": "if [ ! -d  libs ]; then mkdir -p  libs; elif [ \"$(ls -A  libs)\" ]; then rm libs/*; fi",
+    "build-libs": "npm run clear-libs && npm run package-libs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucsorel/ui-router-menu-service.git"
+  },
+  "keywords": [
+    "angularjs",
+    "service",
+    "menu",
+    "routing",
+    "ui-router"
+  ],
+  "author": "Luc Sorel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucsorel/ui-router-menu-service/issues"
+  },
+  "homepage": "https://github.com/lucsorel/ui-router-menu-service#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify": "0.0.7",
+    "gulp-replace": "^0.5.4"
+  }
+}
