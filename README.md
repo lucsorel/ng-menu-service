@@ -82,34 +82,32 @@ angular.module('MyApp')
 
 In the HTML template handling the menu (here: `templates/root.html`):
 ```html
-<div ui.view="">
-    <!-- a menu example with BootstrapCSS -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#myapp-navbar-collapse" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#/"><i>My App</i></a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="myapp-navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li ng-class="menuCtrl.page.name == 'home' ? 'active' : ''"><a href="#/home">Home</a></li>
-                    <li ng-class="menuCtrl.page.name == 'contact' ? 'active' : ''"><a href="#/contact">Contact us</a></li>
-                    <li ng-class="menuCtrl.page.name == 'pricing' ? 'active' : ''"><a href="#/pricing">Pricing</a></li>
-                </ul>
-            </div>
+<!-- a menu example with BootstrapCSS -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#myapp-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/"><i>My App</i></a>
         </div>
-    </nav>
 
-    <!-- UI views for each menu entry -->
-    <div ui-view="home"></div>
-    <div ui-view="contact"></div>
-    <div ui-view="pricing"></div>
-</div>
+        <div class="collapse navbar-collapse" id="myapp-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="menuCtrl.page.name == 'home' ? 'active' : ''"><a href="#/home">Home</a></li>
+                <li ng-class="menuCtrl.page.name == 'contact' ? 'active' : ''"><a href="#/contact">Contact us</a></li>
+                <li ng-class="menuCtrl.page.name == 'pricing' ? 'active' : ''"><a href="#/pricing">Pricing</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- UI views for each menu entry -->
+<div ui-view="home"></div>
+<div ui-view="contact"></div>
+<div ui-view="pricing"></div>
 ```
